@@ -2,45 +2,39 @@
 
 class Translate{
 
-	constructor(){
+	constructor(rule){
 		this.textIn;
 		this.textOut;
 		this.textError = false;
-		this.ruleCyrilyc;
-		this.ruleLatinyc;
+		this.ruleCyrilyc = rule;
 	};
 
-	textIn(){
-		return this.textIn;
+	textInOut(text){
+		if(text){
+			this.textIn = text;
+		}else{
+			return this.textOut;
+		};
 	};
 
-	translate(){
-		var text = sourceElement.value;
-		if(this.textIn === "" || this.textIn === undefined){
+	textErrorOut(){
+		return this.textError;
+	}
+
+	translate(rule){
+		if(this.textIn === "" || this.textIn === undefined  || this.textIn === " "){
 			this.textError = true;
 		}else{
-			// var arr = text.split(" ");
-			// var arrKeysObject = Object.keys(cyrillicLetter);
-			// var newArr = arr.map(element => {
-			// 	arrKeysObject.forEach(el => {
-			// 		element = element.replace(cyrillicLetter[el], rule[el]);
-			// 	});
-			// 	return element;
-			// });
-			// text = newArr.join(" ");
-			// newArr = text.split("");
-			// var arrCompare = [];
-			// newArr.forEach(function(el, ind){
-			// 	if(/\n/.test(el) || ind === newArr.length - 1){
-			// 		text = arrCompare.join("");
-			// 		var p = document.createElement("p");
-			// 		p.innerHTML = text;
-			// 		targetElement.appendChild(p);
-			// 		arrCompare.length = 0;
-			// 	}else{
-			// 		arrCompare.push(el);
-			// 	};
-			// });
+			this.textError = false;
+			let arr = this.textIn.split(" ");
+			let arrKeysObject = Object.keys(this.ruleCyrilyc);
+			let newArr = arr.map(element => {
+				arrKeysObject.forEach(el => {
+					element = element.replace(this.ruleCyrilyc[el], rule[el]);
+				});
+				return element;
+			});
+			this.textOut = newArr.join(" ");
 		};
 	};
 };

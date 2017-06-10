@@ -1,6 +1,6 @@
 "use strict";
-let latynRule_1 = {
-	name:"latynRule_1",
+let latynRule_2 = {
+	name:"latynRule_2",
 	Letter_A:"A",
 	Letter_a:"a",
 	Letter_B:"B",

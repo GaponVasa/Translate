@@ -7,17 +7,21 @@ var ruleElement = sourceRuleElement.querySelectorAll("input[name=\"rule\"");
 var arrCyrylycKeysObject = Object.keys(cyrillicLetter);
 var latynRule_2 ={name:"latynRule_2"};
 var latynRule_3 ={name:"latynRule_3"};
+
 function clearTextArea(){
 	sourceElement.value = "";
 	sourceElement.style.height = "34px";
 };
+
 function pasteHeight(){
 	var heightTA = sourceElement.scrollHeight;
 	sourceElement.style.height = heightTA + "px";
 };
+
 function changeTextArea(){
 	setTimeout(pasteHeight,0);
 };
+
 function translate(rule){
 	var text = sourceElement.value;
 	if(text === "" || text === undefined){
@@ -47,6 +51,7 @@ function translate(rule){
 		});
 	};
 };
+
 function checkInput(){
 	var myRule = [latynRule_1, latynRule_2, latynRule_3];
 	var arrRuleElement = Array.prototype.slice.apply(ruleElement);
@@ -67,6 +72,7 @@ function checkInput(){
 		sourceRuleElement.className += " alert";
 	};
 };
-var clickTr = translateButton.addEventListener("click", checkInput);	
+
+var clickTr = translateButton.addEventListener("click", checkInput);
 var clearTextArea = sourceElement.addEventListener("click", clearTextArea);
 var pasteTextArea = sourceElement.addEventListener("paste", changeTextArea);

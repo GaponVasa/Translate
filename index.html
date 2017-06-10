@@ -12,27 +12,33 @@
 			<h1>Преклад з кирилиці на латину</h1>
 			<form class="source">
 				<p class="sourceText">
-					<textarea name="inputKiril" id="inputKiril"></textarea>
+					<textarea name="inputKiril" id="inputKiril" cols="50" rows="15" title="Поле для тексту кирилицею"></textarea>
+					<textarea name="inputLatyn" id="inputLatyn" cols="50" rows="15" title="Перекладений текст"></textarea>
 				</p>
 				<p class="sourceSubmit">
 					<input id="translate" type="button" value="Перекласти">
+					<input id="clear" type="button" value="Очистити">
 				</p>
 				<p class="sourceRule">
 					<span>Виберіть правило.</span>
 					<input type="radio" name="rule" value="latynRule_1">
-					<lable for="latynRule_1">rule_1</lable>
+					<lable for="latynRule_1">Translit</lable>
 					<input type="radio" name="rule" value="latynRule_2">
-					<lable for="latynRule_2">rule_2</lable>
+					<lable for="latynRule_2">Дучуківка</lable>
 					<input type="radio" name="rule" value="latynRule_3">
 					<lable for="latynRule_3">rule_3</lable>
+					<input type="radio" name="rule" value="latynRule_4">
+					<lable for="latynRule_4">rule_4</lable>
+					<input type="radio" name="rule" value="latynRule_5">
+					<lable for="latynRule_5">rule_5</lable>
 				</p>
 			</form>
-			<div class="targetText"></div>
 		</div>
 	</div>
 	
 	<script src="js/alfavit.js" type="text/javascript"></script>
 	<script src="js/latynRule1.js" type="text/javascript"></script>
+	<script src="js/latynRule2.js" type="text/javascript"></script>
 	<!-- <script src="js/main.js" type="text/javascript"></script> -->
 	<script src="js/model.js" type="text/javascript"></script>
 	<script src="js/view.js" type="text/javascript"></script>

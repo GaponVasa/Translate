@@ -63,5 +63,6 @@ let cyrillicLetter = {
 	Letter_Yu:/Ю/g,
 	Letter_iu:/ю/g,
 	Letter_Ya:/Я/g,
-	Letter_ia:/я/g
+	Letter_ia:/я/g,
+	Letter_softMark:/ь/g
 };

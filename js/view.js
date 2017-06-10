@@ -1,52 +1,70 @@
 "use strict";
 
 class Menu{
-	constructor(model){
+	constructor(model, arrRule){
 		this._model = model;
 		this.sourceElement = document.getElementById("inputKiril");
 		this.translateButton = document.getElementById("translate");
-		this.targetElement = document.querySelector(".targetText");
+		this.clearButton = document.getElementById("clear");
+		this.targetElement = document.getElementById("inputLatyn");
 		this.sourceRuleElement = document.querySelector(".sourceRule");
 		this.ruleElement = this.sourceRuleElement.querySelectorAll("input[name=\"rule\"");
-		//this.arrCyrylycKeysObject = Object.keys(cyrillicLetter);
+		this.ruleLatinyc = arrRule;
+		this.heightTextarea = this.sourceElement.clientHeight;
 	};
 
 	init(){
-		//this.translateButton.addEventListener("click", checkInput);
-		this.sourceElement.addEventListener("paste", this.pasteHeight);
-		console.dir(this._model.textIn());
+		this.sourceElement.addEventListener("paste", this.changeTextArea.bind(this));
+		this.translateButton.addEventListener("click", this.checkInput.bind(this));
+		this.clearButton.addEventListener("click", this.clearTextarea.bind(this));
 	};
 
-	changeTextArea(){
-		setTimeout(this.pasteHeight,0);
-		console.log("ok changeTextArea");
+	clearTextarea(){
+		this.sourceElement.value = "";
+		this.targetElement.value = "";
+		this.sourceElement.style.height = this.heightTextarea + "px";
+		this.targetElement.style.height = this.heightTextarea + "px";
 	};
 
-	pasteHeight(){
-		var heightTA = this.sourceElement.scrollHeight;
-		this.sourceElement.style.height = heightTA + "px";
-		this._model.textIn(this.sourceElement.value);
-		console.dir(this._model.textIn());
-		console.log("ok pasteHeight");
+	changeTextArea(){//Автоматично збільшуємо висоту textarea
+		setTimeout(()=>{
+			let heightTA = this.sourceElement.scrollHeight;
+			this.sourceElement.style.height = heightTA + "px";
+			this.targetElement.style.height = heightTA + "px";
+		},0);
 	};
-	// checkInput(){
-	// 	var myRule = [latynRule_1, latynRule_2, latynRule_3];
-	// 	var arrRuleElement = Array.prototype.slice.apply(ruleElement);
-	// 	if(arrRuleElement.some((el)=>el.checked === true)){
-	// 		sourceRuleElement.classList.remove("alert");
-	// 		var valueCheck; 
-	// 		arrRuleElement.forEach(el => {
-	// 			if(el.checked === true){
-	// 				myRule.forEach(elem =>{
-	// 					if(elem.name === el.value){
-	// 						valueCheck = elem;
-	// 					};
-	// 				})
-	// 			};
-	// 		});
-	// 		translate(valueCheck);
-	// 	}else{
-	// 		sourceRuleElement.className += " alert";
-	// 	};
-	// };
+
+	translate(thisRule){//Переклад тексту після перевірок
+		let text = this.sourceElement.value;
+		this._model.textInOut(text);
+		this._model.translate(thisRule);
+		if(this._model.textErrorOut()){//Перевіряємо чи введено текст чи ні
+			this.sourceElement.value += "ВВедіть сюда текст.";//Якщо ні виводимо текст
+		}else{//Якщо ТАК
+			let newText = this._model.textInOut();
+			let lineText = document.createTextNode(newText);
+			this.targetElement.appendChild(lineText);
+		}
+	};
+
+	checkInput(){//Перевіряєм правила перекладу
+		let arrRuleElement = Array.prototype.slice.apply(this.ruleElement);
+		if(arrRuleElement.some((el)=>el.checked === true)){
+			this.sourceRuleElement.classList.remove("alert");
+			let valueCheck; 
+			arrRuleElement.forEach(el => {
+				if(el.checked === true){
+					this.ruleLatinyc.forEach(elem =>{
+						if(elem.name === el.value){
+							valueCheck = elem;
+						};
+					})
+				};
+			});
+			this.translate(valueCheck);
+		}else{
+			this.sourceRuleElement.className += " alert";
+		};
+	};
+
 };
