@@ -1,16 +1,358 @@
 "use strict";
 let latynRule_2 = {
 	name:"latynRule_2",
-
-				// rule1:{
-				// 	reg:/(?!^)/g,
-				// 	translateRule:"A"
-				// },
-				// rule2:{
-				// 	reg:/(?!^)/g,
-				// 	translateRule:"A"
-				// },
-	
+	Letter_D:{
+				rule1:{
+					reg:/Дь/g,
+					translateRule:"Ď"
+				},
+				rule2:{
+					reg:/Дє/g,
+					translateRule:"Ďe"
+				},
+				rule3:{
+					reg:/Дю/g,
+					translateRule:"Ďu"
+				},
+				rule4:{
+					reg:/Дя/g,
+					translateRule:"Ďa"
+				},
+				rule5:{
+					reg:/Д/g,
+					translateRule:"D"
+				}
+			},
+	Letter_d:{
+				rule1:{
+					reg:/дь/g,
+					translateRule:"ď"
+				},
+				rule2:{
+					reg:/дє/g,
+					translateRule:"ďe"
+				},
+				rule3:{
+					reg:/дю/g,
+					translateRule:"ďu"
+				},
+				rule4:{
+					reg:/дя/g,
+					translateRule:"ďa"
+				},
+				rule5:{
+					reg:/д/g,
+					translateRule:"d"
+				}
+			},
+	Letter_Z:{
+				rule1:{
+					reg:/Зь/g,
+					translateRule:"Ź"
+				},
+				rule2:{
+					reg:/Зє/g,
+					translateRule:"Źe"
+				},
+				rule3:{
+					reg:/Зю/g,
+					translateRule:"Źu"
+				},
+				rule4:{
+					reg:/Зя/g,
+					translateRule:"Źa"
+				},
+				rule5:{
+					reg:/З/g,
+					translateRule:"Z"
+				}
+			},
+	Letter_z:{
+				rule1:{
+					reg:/зь/g,
+					translateRule:"ź"
+				},
+				rule2:{
+					reg:/зє/g,
+					translateRule:"źe"
+				},
+				rule3:{
+					reg:/зю/g,
+					translateRule:"źu"
+				},
+				rule4:{
+					reg:/зя/g,
+					translateRule:"źa"
+				},
+				rule5:{
+					reg:/з/g,
+					translateRule:"z"
+				}
+			},
+			Letter_L:{
+				rule1:{
+					reg:/^Ль/g,
+					translateRule:"Ľ"
+				},
+				rule2:{
+					reg:/^Лє/g,
+					translateRule:"Ľe"
+				},
+				rule3:{
+					reg:/^Лю/g,
+					translateRule:"Ľu"
+				},
+				rule4:{
+					reg:/^Ля/g,
+					translateRule:"Ľa"
+				},
+				rule5:{
+					reg:/Л/g,
+					translateRule:"L"
+				}
+			},
+	Letter_l:{
+				rule1:{
+					reg:/ль/g,
+					translateRule:"ľ"
+				},
+				rule2:{
+					reg:/лє/g,
+					translateRule:"ľe"
+				},
+				rule3:{
+					reg:/лю/g,
+					translateRule:"ľu"
+				},
+				rule4:{
+					reg:/ля/g,
+					translateRule:"ľa"
+				},
+				rule5:{
+					reg:/л/g,
+					translateRule:"l"
+				}
+			},
+	Letter_N:{
+				rule1:{
+					reg:/^Нь/g,
+					translateRule:"Ń"
+				},
+				rule2:{
+					reg:/^Нє/g,
+					translateRule:"Ńe"
+				},
+				rule3:{
+					reg:/^Ню/g,
+					translateRule:"Ńu"
+				},
+				rule4:{
+					reg:/^Ня/g,
+					translateRule:"Ńa"
+				},
+				rule5:{
+					reg:/Н/g,
+					translateRule:"N"
+				}
+			},
+	Letter_n:{
+				rule1:{
+					reg:/нь/g,
+					translateRule:"ń"
+				},
+				rule2:{
+					reg:/нє/g,
+					translateRule:"ńe"
+				},
+				rule3:{
+					reg:/ню/g,
+					translateRule:"ńu"
+				},
+				rule4:{
+					reg:/ня/g,
+					translateRule:"ńa"
+				},
+				rule5:{
+					reg:/н/g,
+					translateRule:"n"
+				}
+			},
+	Letter_R:{
+				rule1:{
+					reg:/^Рь/g,
+					translateRule:"Ŕ"
+				},
+				rule2:{
+					reg:/^Рє/g,
+					translateRule:"Ŕe"
+				},
+				rule3:{
+					reg:/^Рю/g,
+					translateRule:"Ŕu"
+				},
+				rule4:{
+					reg:/^Ря/g,
+					translateRule:"Ŕa"
+				},
+				rule5:{
+					reg:/Р/g,
+					translateRule:"R"
+				}
+			},
+	Letter_r:{
+				rule1:{
+					reg:/рь/g,
+					translateRule:"ŕ"
+				},
+				rule2:{
+					reg:/рє/g,
+					translateRule:"ŕe"
+				},
+				rule3:{
+					reg:/рю/g,
+					translateRule:"ŕu"
+				},
+				rule4:{
+					reg:/ря/g,
+					translateRule:"ŕa"
+				},
+				rule5:{
+					reg:/р/g,
+					translateRule:"r"
+				}
+			},
+	Letter_S:{
+				rule1:{
+					reg:/^Сь/g,
+					translateRule:"Ś"
+				},
+				rule2:{
+					reg:/^Сє/g,
+					translateRule:"Śe"
+				},
+				rule3:{
+					reg:/^Сю/g,
+					translateRule:"Śu"
+				},
+				rule4:{
+					reg:/^Ся/g,
+					translateRule:"Śa"
+				},
+				rule5:{
+					reg:/С/g,
+					translateRule:"S"
+				}
+			},
+	Letter_s:{
+				rule1:{
+					reg:/сь/g,
+					translateRule:"ś"
+				},
+				rule2:{
+					reg:/сє/g,
+					translateRule:"śe"
+				},
+				rule3:{
+					reg:/сю/g,
+					translateRule:"śu"
+				},
+				rule4:{
+					reg:/ся/g,
+					translateRule:"śa"
+				},
+				rule5:{
+					reg:/с/g,
+					translateRule:"s"
+				}
+			},
+	Letter_T:{
+				rule1:{
+					reg:/^Ть/g,
+					translateRule:"Ť"
+				},
+				rule2:{
+					reg:/^Тє/g,
+					translateRule:"Ťe"
+				},
+				rule3:{
+					reg:/^Тю/g,
+					translateRule:"Ťu"
+				},
+				rule4:{
+					reg:/^Тя/g,
+					translateRule:"Ťa"
+				},
+				rule5:{
+					reg:/Т/g,
+					translateRule:"T"
+				}
+			},
+	Letter_t:{
+				rule1:{
+					reg:/ть/g,
+					translateRule:"ť"
+				},
+				rule2:{
+					reg:/тє/g,
+					translateRule:"ťe"
+				},
+				rule3:{
+					reg:/тю/g,
+					translateRule:"ťu"
+				},
+				rule4:{
+					reg:/тя/g,
+					translateRule:"ťa"
+				},
+				rule5:{
+					reg:/т/g,
+					translateRule:"t"
+				}
+			},
+	Letter_Ts:{
+				rule1:{
+					reg:/^Ць/g,
+					translateRule:"Ć"
+				},
+				rule2:{
+					reg:/^Цє/g,
+					translateRule:"Će"
+				},
+				rule3:{
+					reg:/^Цю/g,
+					translateRule:"Ću"
+				},
+				rule4:{
+					reg:/^Ця/g,
+					translateRule:"Ća"
+				},
+				rule5:{
+					reg:/Ц/g,
+					translateRule:"C"
+				}
+			},
+	Letter_ts:{
+				rule1:{
+					reg:/ць/g,
+					translateRule:"ć"
+				},
+				rule2:{
+					reg:/цє/g,
+					translateRule:"će"
+				},
+				rule3:{
+					reg:/цю/g,
+					translateRule:"ću"
+				},
+				rule4:{
+					reg:/ця/g,
+					translateRule:"ća"
+				},
+				rule5:{
+					reg:/ц/g,
+					translateRule:"c"
+				}
+			},
 	Letter_A:{
 				reg:/А/g,
 				translateRule:"A"
@@ -51,50 +393,6 @@ let latynRule_2 = {
 				reg:/ґ/g,
 				translateRule:"g"
 			},
-	Letter_D:{
-				rule1:{
-					reg:/^Дя/g,
-					translateRule:"Ďa"
-				},
-				rule2:{
-					reg:/^Дь/g,
-					translateRule:"Ď"
-				},
-				rule3:{
-					reg:/^Дє/g,
-					translateRule:"Ďe"
-				},
-				rule4:{
-					reg:/^Дю/g,
-					translateRule:"Ďu"
-				},
-				rule5:{
-					reg:/Д/g,
-					translateRule:"D"
-				}
-			},
-	Letter_d:{
-				rule1:{
-					reg:/дя/g,
-					translateRule:"ďa"
-				},
-				rule2:{
-					reg:/дь/g,
-					translateRule:"ď"
-				},
-				rule3:{
-					reg:/дє/g,
-					translateRule:"ďe"
-				},
-				rule4:{
-					reg:/дю/g,
-					translateRule:"ďu"
-				},
-				rule5:{
-					reg:/д/g,
-					translateRule:"d"
-				}
-			},
 	Letter_E:{
 				reg:/Е/g,
 				translateRule:"E"
@@ -118,50 +416,6 @@ let latynRule_2 = {
 	Letter_zh:{
 				reg:/ж/g,
 				translateRule:"ž"
-			},
-	Letter_Z:{
-				rule1:{
-					reg:/^Зя/g,
-					translateRule:"Źa"
-				},
-				rule2:{
-					reg:/^Зь/g,
-					translateRule:"Ź"
-				},
-				rule3:{
-					reg:/^Зє/g,
-					translateRule:"Źe"
-				},
-				rule4:{
-					reg:/^Зю/g,
-					translateRule:"Źu"
-				},
-				rule5:{
-					reg:/З/g,
-					translateRule:"Z"
-				}
-			},
-	Letter_z:{
-				rule1:{
-					reg:/зя/g,
-					translateRule:"źa"
-				},
-				rule2:{
-					reg:/зь/g,
-					translateRule:"ź"
-				},
-				rule3:{
-					reg:/зє/g,
-					translateRule:"źe"
-				},
-				rule4:{
-					reg:/зю/g,
-					translateRule:"źu"
-				},
-				rule5:{
-					reg:/з/g,
-					translateRule:"z"
-				}
 			},
 	Letter_Y:{
 				reg:/И/g,
@@ -203,50 +457,6 @@ let latynRule_2 = {
 				reg:/к/g,
 				translateRule:"k"
 			},
-	Letter_L:{
-				rule1:{
-					reg:/Л/g,
-					translateRule:"L"
-				},
-				rule2:{
-					reg:/^Ль/g,
-					translateRule:"Ń"
-				},
-				rule3:{
-					reg:/^Лє/g,
-					translateRule:"Ńe"
-				},
-				rule4:{
-					reg:/^Лю/g,
-					translateRule:"Ńu"
-				},
-				rule5:{
-					reg:/^Ля/g,
-					translateRule:"Ńa"
-				}
-			},
-	Letter_l:{
-				rule1:{
-					reg:/л/g,
-					translateRule:"l"
-				},
-				rule2:{
-					reg:/ль/g,
-					translateRule:"ń"
-				},
-				rule3:{
-					reg:/лє/g,
-					translateRule:"ńe"
-				},
-				rule4:{
-					reg:/лю/g,
-					translateRule:"ńu"
-				},
-				rule5:{
-					reg:/ля/g,
-					translateRule:"ńa"
-				}
-			},
 	Letter_M:{
 				reg:/М/g,
 				translateRule:"M"
@@ -254,50 +464,6 @@ let latynRule_2 = {
 	Letter_m:{
 				reg:/м/g,
 				translateRule:"m"
-			},
-	Letter_N:{
-				rule1:{
-					reg:/Н/g,
-					translateRule:"N"
-				},
-				rule2:{
-					reg:/^Нь/g,
-					translateRule:"Ń"
-				},
-				rule3:{
-					reg:/^Нє/g,
-					translateRule:"Ńe"
-				},
-				rule4:{
-					reg:/^Ню/g,
-					translateRule:"Ńu"
-				},
-				rule5:{
-					reg:/^Ня/g,
-					translateRule:"Ńa"
-				}
-			},
-	Letter_n:{
-				rule1:{
-					reg:/н/g,
-					translateRule:"n"
-				},
-				rule2:{
-					reg:/нь/g,
-					translateRule:"ń"
-				},
-				rule3:{
-					reg:/нє/g,
-					translateRule:"ńe"
-				},
-				rule4:{
-					reg:/ню/g,
-					translateRule:"ńu"
-				},
-				rule5:{
-					reg:/ня/g,
-					translateRule:"ńa"
-				}
 			},
 	Letter_O:{
 				reg:/О/g,
@@ -314,138 +480,6 @@ let latynRule_2 = {
 	Letter_p:{
 				reg:/п/g,
 				translateRule:"p"
-			},
-	Letter_R:{
-				rule1:{
-					reg:/Р/g,
-					translateRule:"R"
-				},
-				rule2:{
-					reg:/^Рь/g,
-					translateRule:"Ŕ"
-				},
-				rule3:{
-					reg:/^Рє/g,
-					translateRule:"Ŕe"
-				},
-				rule4:{
-					reg:/^Рю/g,
-					translateRule:"Ŕu"
-				},
-				rule5:{
-					reg:/^Ря/g,
-					translateRule:"Ŕa"
-				}
-			},
-	Letter_r:{
-				rule1:{
-					reg:/р/g,
-					translateRule:"r"
-				},
-				rule2:{
-					reg:/рь/g,
-					translateRule:"ŕ"
-				},
-				rule3:{
-					reg:/рє/g,
-					translateRule:"ŕe"
-				},
-				rule4:{
-					reg:/рю/g,
-					translateRule:"ŕu"
-				},
-				rule5:{
-					reg:/ря/g,
-					translateRule:"ŕa"
-				}
-			},
-	Letter_S:{
-				rule1:{
-					reg:/С/g,
-					translateRule:"S"
-				},
-				rule2:{
-					reg:/^Сь/g,
-					translateRule:"Ś"
-				},
-				rule3:{
-					reg:/^Сє/g,
-					translateRule:"Śe"
-				},
-				rule4:{
-					reg:/^Сю/g,
-					translateRule:"Śu"
-				},
-				rule5:{
-					reg:/^Ся/g,
-					translateRule:"Śa"
-				}
-			},
-	Letter_s:{
-				rule1:{
-					reg:/с/g,
-					translateRule:"s"
-				},
-				rule2:{
-					reg:/сь/g,
-					translateRule:"ś"
-				},
-				rule3:{
-					reg:/сє/g,
-					translateRule:"śe"
-				},
-				rule4:{
-					reg:/сю/g,
-					translateRule:"śu"
-				},
-				rule5:{
-					reg:/ся/g,
-					translateRule:"śa"
-				}
-			},
-	Letter_T:{
-				rule1:{
-					reg:/Т/g,
-					translateRule:"T"
-				},
-				rule2:{
-					reg:/^Ть/g,
-					translateRule:"Ť"
-				},
-				rule3:{
-					reg:/^Тє/g,
-					translateRule:"Ťe"
-				},
-				rule4:{
-					reg:/^Тю/g,
-					translateRule:"Ťu"
-				},
-				rule5:{
-					reg:/^Тя/g,
-					translateRule:"Ťa"
-				}
-			},
-	Letter_t:{
-				rule1:{
-					reg:/т/g,
-					translateRule:"t"
-				},
-				rule2:{
-					reg:/ть/g,
-					translateRule:"ť"
-				},
-				rule3:{
-					reg:/тє/g,
-					translateRule:"ťe"
-				},
-				rule4:{
-					reg:/тю/g,
-					translateRule:"ťu"
-				},
-				rule5:{
-					reg:/тя/g,
-					translateRule:"ťa"
-				}
 			},
 	Letter_U:{
 				reg:/У/g,
@@ -470,50 +504,6 @@ let latynRule_2 = {
 	Letter_kh:{
 				reg:/х/g,
 				translateRule:"x"
-			},
-	Letter_Ts:{
-				rule1:{
-					reg:/Ц/g,
-					translateRule:"C"
-				},
-				rule2:{
-					reg:/^Ць/g,
-					translateRule:"Ć"
-				},
-				rule3:{
-					reg:/^Цє/g,
-					translateRule:"Će"
-				},
-				rule4:{
-					reg:/^Цю/g,
-					translateRule:"Ću"
-				},
-				rule5:{
-					reg:/^Ця/g,
-					translateRule:"Ća"
-				}
-			},
-	Letter_ts:{
-				rule1:{
-					reg:/ц/g,
-					translateRule:"c"
-				},
-				rule2:{
-					reg:/ць/g,
-					translateRule:"ć"
-				},
-				rule3:{
-					reg:/цє/g,
-					translateRule:"će"
-				},
-				rule4:{
-					reg:/цю/g,
-					translateRule:"ću"
-				},
-				rule5:{
-					reg:/ця/g,
-					translateRule:"ća"
-				}
 			},
 	Letter_Ch:{
 				reg:/Ч/g,
@@ -564,3 +554,49 @@ let latynRule_2 = {
 				translateRule:"'"
 			}
 };
+/*а 
+б
+в
+г
+ґ
+д Дь дь дя дю
+е
+є Є 
+и 
+і 
+ї 
+й 
+ж Ж
+з З Зь зь зя зю
+к 
+л
+м
+н Нь нь
+о
+п 
+Р р Рь рь
+с
+сь Сь
+ть
+т Ть
+у
+ф 
+х
+Ц ц
+ч Ч 
+ш Ш
+щ Щ
+ю Ю юля манюня
+я ня ая ся тя ря
+ь
+Дь Зь Нь Ль Рь Ть Сь Ць
+дь зь нь ль рь ть сь ць
+
+Дє Зє Нє Лє Рє Тє Сє Цє
+дє зє нє лє рє тє сє цє
+ 
+Дя Зя Ня Ля Ря Тя Ся Ця
+дя зя ня ля ря тя ся ця
+
+Дю Зю Ню Лю Рю Тю Сю Цю
+дю зю ню лю рю тю сю цю*/

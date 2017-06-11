@@ -16,6 +16,7 @@ class Menu{
 	init(){
 		this.sourceElement.addEventListener("paste", this.changeTextArea.bind(this));
 		this.translateButton.addEventListener("click", this.checkInput.bind(this));
+		//this.sourceElement.addEventListener("keyup", this.checkInput.bind(this));
 		this.clearButton.addEventListener("click", this.clearTextarea.bind(this));
 	};
 

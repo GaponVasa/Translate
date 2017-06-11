@@ -1,9 +1,5 @@
 "use strict";
-// var latynRule_2 ={name:"latynRule_2"};
-var latynRule_3 ={name:"latynRule_3"};
-var latynRule_4 ={name:"latynRule_4"};
-var latynRule_5 ={name:"latynRule_5"};
-let myRule = [latynRule_1, latynRule_2, latynRule_3, latynRule_4, latynRule_5];
+let myRule = [latynRule_1, latynRule_2, latynRule_3, latynRule_4];
 let cyrylicRule = cyrillicLetter;
 let m = new Translate();
 let v = new Menu(m, myRule);
