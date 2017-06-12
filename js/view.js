@@ -1,11 +1,11 @@
 "use strict";
-
 class Menu{
 	constructor(model, arrRule){
 		this._model = model;
 		this.sourceElement = document.getElementById("inputKiril");
 		this.translateButton = document.getElementById("translate");
 		this.clearButton = document.getElementById("clear");
+		this.copyButton = document.getElementById("copy");
 		this.targetElement = document.getElementById("inputLatyn");
 		this.sourceRuleElement = document.querySelector(".sourceRule");
 		this.ruleElement = this.sourceRuleElement.querySelectorAll("input[name=\"rule\"");
@@ -14,15 +14,23 @@ class Menu{
 	};
 
 	init(){
+		new Clipboard('.btn');
 		this.sourceElement.addEventListener("paste", this.changeTextArea.bind(this));
 		this.translateButton.addEventListener("click", this.checkInput.bind(this));
 		//this.sourceElement.addEventListener("keyup", this.checkInput.bind(this));
+		this.copyButton.addEventListener("click", this.copyTextarea.bind(this));
 		this.clearButton.addEventListener("click", this.clearTextarea.bind(this));
+	};
+
+	copyTextarea(){
+		console.log("Ok");
+		console.log(this);
+
 	};
 
 	clearTextarea(){
 		this.sourceElement.value = "";
-		this.targetElement.value = "";
+		this.targetElement.removeChild(this.targetElement.firstChild);
 		this.sourceElement.style.height = this.heightTextarea + "px";
 		this.targetElement.style.height = this.heightTextarea + "px";
 	};
@@ -33,6 +41,7 @@ class Menu{
 			this.sourceElement.style.height = heightTA + "px";
 			this.targetElement.style.height = heightTA + "px";
 		},0);
+		console.log(ClipboardEvent.clipboardData);
 	};
 
 	translate(thisRule){//Переклад тексту після перевірок

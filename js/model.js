@@ -56,9 +56,7 @@ class Translate{
 							return;
 						};
 					};
-
 				});
-				
 			}
 		});
 		return text;

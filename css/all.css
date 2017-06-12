@@ -14,19 +14,7 @@ a{text-decoration: none;}
 q:before, q:after { content:''; }
 *:focus {outline: none;}
 /* end reset */
-/*----------------------------Font name-----------------------------*/
-	/*font: px georgia, serif;
-	font: px "times new roman", times, serif;
-	font: px arial, helvetica, sans-serif;
-	font: px tahoma, geneva, sans-serif;
-	font: px "trebuchet ms", helvetica, sans-serif;
-	font: px verdana, geneva, sans-serif;
-	font: px "ms serif", "new york", serif;
-	font: px "arial black", gadget, sans-serif;
-	font: px "lucida sans", unicode, "lucida grande", sans-serif;*/
-@font-face {
-	
-}
+
 /*---------------------------start---------------------------------*/
 html{
  height:100%;
@@ -69,7 +57,6 @@ h1{
 	margin: 20px 0;
 }
 .sourceText, .targetText{
-	/*width: 580px;*/
 	overflow: hidden;
 }
 #inputKiril{float: left;}
@@ -82,7 +69,7 @@ h1{
 	line-height: 18px;
 }
 .sourceSubmit{}
-#translate, #clear{
+#translate, #clear, #copy{
 	font-size: 14px;
 	line-height: 14px;
 	padding: 8px 10px;
@@ -102,6 +89,7 @@ h1{
 #translate{
 	background-color: #5988b7;
 }
+#copy{background-color: #5988b7;}
 #clear{
 	background-color: #44627f;
 }
@@ -129,16 +117,3 @@ h1{
 .alert span{
 	color:red;
 }
-
-
-/*.targetText{
-	width: 100%;
-	border: 1px solid black;
-	margin: 20px 0;
-	padding: 10px;
-}
-.targetText p{
-	font-size: 14px;
-	line-height: 14px;
-	margin: 7px;
-}*/
